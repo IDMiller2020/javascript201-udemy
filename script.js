@@ -1,10 +1,10 @@
 class Collectible {
-  constructor (image, title, description, rarity, tags) {
-    this.image = image
+  constructor ({image, title, description, rarity, tags}) {
+    this.image = image || '//placehold.it/200x200'
     this.title = title
     this.description = description
-    this.rarity = rarity
-    this.tags = tags
+    this.rarity = rarity || 'common'
+    this.tags = tags || []
   }
   addTag(tag) {
     this.tags.push(tag)
